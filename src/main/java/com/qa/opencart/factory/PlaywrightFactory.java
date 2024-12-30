@@ -40,16 +40,19 @@ public class PlaywrightFactory {
         playwright = Playwright.create();
         switch (browserName) {
             case "chromium":
-                browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+                browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(2000));
                 break;
             case "firefox":
                 browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(2000));
                 break;
             case "safari":
-                browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
+                browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(2000));
                 break;
             case "chrome":
                 browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false).setSlowMo(2000));
+                break;
+            case "edge":
+                browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("msedge").setHeadless(false).setSlowMo(2000));
                 break;
             default:
                 System.out.println("You are entering wrong browser name :" + browserName);

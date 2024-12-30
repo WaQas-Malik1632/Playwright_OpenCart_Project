@@ -18,14 +18,14 @@ public class HomePageTestClass extends BaseTest {
     public void HomePageTitle() {
 
         String ActualTitle = home.getHomePageTitle();
-        Assert.assertEquals(ActualTitle, AppConstants.LOGIN_PAGE_TITLE);
+        Assert.assertEquals(ActualTitle, AppConstants.HOME_PAGE_TITLE);
     }
 
     @DataProvider
     public Object[][] getProductData() {
 
         return new Object[][]{
-                {"Mackbook"},
+                {"Macbook"},
                 {"iMac"},
                 {"Samsung"},
         };

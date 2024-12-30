@@ -3,6 +3,7 @@ package com.qa.opencart.testcases;
 import com.microsoft.playwright.Page;
 import com.qa.opencart.factory.PlaywrightFactory;
 import com.qa.opencart.pages.HomePage;
+import com.qa.opencart.pages.LoginPage;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 
@@ -14,9 +15,10 @@ public class BaseTest {
     Page page;
     protected Properties prop;
     protected HomePage home;
+    protected LoginPage Login;
 
     @BeforeTest
-    public void setup() {
+    public void Setup() {
 
         pf = new PlaywrightFactory();
         prop = pf.init_prop();

@@ -8,6 +8,8 @@ public class HomePage {
     private String search = "//*[@id=\"search\"]/input";
     private String searchIcon = "//*[@id=\"search\"]/span/button";
     private String SearchPageHeader = "div#content h1";
+    private String MyAccountLink="//span[normalize-space()='My Account']";
+    private String loginLink="a:text('login')";
 
     public HomePage(Page page) {
 
@@ -35,6 +37,11 @@ public class HomePage {
         String header = page.textContent(SearchPageHeader);
         System.out.println("Search product name: " + header);
         return header;
+    }
+    public LoginPage navigateToLogin(){
+        page.click(MyAccountLink);
+        page.click(loginLink);
+        return new LoginPage(page);
     }
 
 }
