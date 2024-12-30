@@ -24,6 +24,6 @@ public class LoginPageTest extends BaseTest {
 
     @Test(priority = 3)
     public void appLoginTest() {
-        Assert.assertTrue(Login.doLogin(prop.getProperty("username"),prop.getProperty("Password")));
+        Assert.assertTrue(Login.doLogin(prop.getProperty("username"),prop.getProperty("password")));
     }
 }
