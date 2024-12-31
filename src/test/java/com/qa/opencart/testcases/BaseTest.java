@@ -28,7 +28,6 @@ public class BaseTest {
 
     @AfterTest
     public void Teardown() {
-
         page.context().browser().close();
     }
 

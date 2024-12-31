@@ -34,8 +34,8 @@ public class HomePageTestClass extends BaseTest {
     @Test(priority = 3, dataProvider = "getProductData")
     public void HomePageSearch(String ProductName) {
 
-        String ActualSearchHeaderName = home.doSearch(ProductName);
-        Assert.assertEquals(ActualSearchHeaderName, "Search - " + ProductName);
+        String actualSearchHeaderName = home.doSearch(ProductName);
+        Assert.assertEquals(actualSearchHeaderName, "Search - " + ProductName);
     }
 
 }

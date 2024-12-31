@@ -7,8 +7,8 @@ public class HomePage {
     private Page page;
     private String search = "//*[@id=\"search\"]/input";
     private String searchIcon = "//*[@id=\"search\"]/span/button";
-    private String SearchPageHeader = "div#content h1";
-    private String MyAccountLink="//span[normalize-space()='My Account']";
+    private String searchPageHeader = "div#content h1";
+    private String myAccountLink="//span[normalize-space()='My Account']";
     private String loginLink="a:text('login')";
 
     public HomePage(Page page) {
@@ -34,13 +34,14 @@ public class HomePage {
 
         page.fill(search, ProductName);
         page.click(searchIcon);
-        String header = page.textContent(SearchPageHeader);
+        String header = page.textContent(searchPageHeader);
         System.out.println("Search product name: " + header);
         return header;
     }
     public LoginPage navigateToLogin(){
-        page.click(MyAccountLink);
+        page.click(myAccountLink);
         page.click(loginLink);
+
         return new LoginPage(page);
     }
 
