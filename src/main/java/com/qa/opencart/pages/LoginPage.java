@@ -5,13 +5,13 @@ import com.microsoft.playwright.Page;
 public class LoginPage {
     private Page page;
 
-    private String emailId = "//input[@id='input-email']";
-    private String pass = "//input[@id='input-password']";
-    private String loginBtnClick = "//input[@value='Login']";
+    private final String emailId = "//input[@id='input-email']";
+    private final String pass = "//input[@id='input-password']";
+    private final String loginBtnClick = "//input[@value='Login']";
 
-    private String clickForgotPassword = "//div[@class='form-group']//a[normalize-space()='Forgotten Password']";
+    private final String clickForgotPassword = "//div[@class='form-group']//a[normalize-space()='Forgotten Password']";
 
-    private String logoutBtn = "//a[@class='list-group-item'][normalize-space()='Logout']";
+    private final String logoutBtn = "//a[@class='list-group-item'][normalize-space()='Logout']";
 
     public LoginPage(Page page) {
         this.page = page;

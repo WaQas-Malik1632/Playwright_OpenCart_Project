@@ -8,24 +8,27 @@ import com.microsoft.playwright.Playwright;
 
 import java.awt.*;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.Base64;
 import java.util.Properties;
 
 public class PlaywrightFactory {
 
+    /*
     Playwright playwright;
     Browser browser;
     BrowserContext browserContext;
     Page page;
+    */
+
     Properties prop;
 
+    private static final ThreadLocal<Playwright> tlPlaywright = new ThreadLocal<>();
+    private static final ThreadLocal<Browser> tlBrowser = new ThreadLocal<>();
+    private static final ThreadLocal<BrowserContext> tlBrowserContext = new ThreadLocal<>();
+    private static final ThreadLocal<Page> tlPage = new ThreadLocal<>();
 
-    private static ThreadLocal<Browser> tlBrowser = new ThreadLocal<>();
-    private static ThreadLocal<BrowserContext> tlBrowserContext = new ThreadLocal<>();
-    private static ThreadLocal<Page> tlPage = new ThreadLocal<>();
-
-    private static ThreadLocal<Playwright> tlPlaywright = new ThreadLocal<>();
 
     public static Playwright getPlaywright() {
 
@@ -48,14 +51,11 @@ public class PlaywrightFactory {
     }
 
     public Properties init_prop() {
-
-        try {
-            FileInputStream ip = new FileInputStream("./src/test/resources/config/config.properties");
-            prop = new Properties();
+        Properties prop = new Properties();
+        try (FileInputStream ip = new FileInputStream("./src/test/resources/config/config.properties")) {
             prop.load(ip);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
+            System.err.println("Error loading configuration file: " + e.getMessage());
             e.printStackTrace();
         }
         return prop;
@@ -108,6 +108,15 @@ public class PlaywrightFactory {
         getPage().navigate(prop.getProperty("url").trim());
 
         return getPage();
+    }
+    public static String takeScreenshot() {
+        String path = System.getProperty("user.dir") + "/screenshot/" + System.currentTimeMillis() + ".png";
+        //getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
+
+        byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
+        String base64Path = Base64.getEncoder().encodeToString(buffer);
+
+        return base64Path;
     }
 
 }

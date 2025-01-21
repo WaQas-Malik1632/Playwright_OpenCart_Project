@@ -5,11 +5,12 @@ import com.microsoft.playwright.Page;
 public class HomePage {
 
     private Page page;
-    private String search = "//*[@id=\"search\"]/input";
-    private String searchIcon = "//*[@id=\"search\"]/span/button";
-    private String searchPageHeader = "div#content h1";
-    private String myAccountLink="//span[normalize-space()='My Account']";
-    private String loginLink="a:text('login')";
+
+    private final String search = "//*[@id=\"search\"]/input";
+    private final String searchIcon = "//*[@id=\"search\"]/span/button";
+    private final String searchPageHeader = "div#content h1";
+    private final String myAccountLink="//span[normalize-space()='My Account']";
+    private final String loginLink="a:text('login')";
 
     public HomePage(Page page) {
 
@@ -34,8 +35,10 @@ public class HomePage {
 
         page.fill(search, ProductName);
         page.click(searchIcon);
+
         String header = page.textContent(searchPageHeader);
         System.out.println("Search product name: " + header);
+
         return header;
     }
     public LoginPage navigateToLogin(){
