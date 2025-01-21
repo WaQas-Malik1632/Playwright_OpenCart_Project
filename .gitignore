@@ -1,5 +1,4 @@
-allure-results/
-build/
-screenshots/
-screenshot/
-test-output/
+/allure-results
+/build
+/screenshot
+/test-output/
