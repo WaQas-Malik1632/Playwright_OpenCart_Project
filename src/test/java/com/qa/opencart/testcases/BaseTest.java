@@ -13,7 +13,8 @@ public class BaseTest {
 
     PlaywrightFactory pf;
     Page page;
-    protected Properties prop;
+    public static Properties prop;
+
     protected HomePage home;
     protected LoginPage Login;
 
