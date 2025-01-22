@@ -10,6 +10,8 @@ import java.awt.*;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Base64;
 import java.util.Properties;
 
@@ -110,7 +112,12 @@ public class PlaywrightFactory {
         return getPage();
     }
     public static String takeScreenshot() {
-        String path = System.getProperty("user.dir") + "/screenshot/" + System.currentTimeMillis() + ".png";
+        LocalDateTime date = LocalDateTime.now();
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd_MM_yyyy_HH-mm-ss");
+        String formattedDate = date.format(myFormatObj);
+
+        String path = System.getProperty("user.dir") + "/screenshot/" +formattedDate+ ".png";
+     //   String path = System.getProperty("user.dir") + "/screenshot/" + System.currentTimeMillis() + ".png";
         //getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
 
         byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));

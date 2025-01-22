@@ -16,6 +16,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Properties;
 
 public class ExtentReportListener implements ITestListener
 {
@@ -49,7 +50,9 @@ public class ExtentReportListener implements ITestListener
             extentReports.setSystemInfo("Build#", "2.1");
             extentReports.setSystemInfo("Team", "Test Team");
             extentReports.setSystemInfo("Customer Name", "TestCustomer");
-            extentReports.setSystemInfo("ENV NAME", System.getProperty("env"));
+          //  extentReports.setSystemInfo("ENV NAME", System.getProperty("env"));
+
+            extentReports.setSystemInfo("ENV NAME", "Demo");
 
             return extentReports;
         }
@@ -90,20 +93,20 @@ public class ExtentReportListener implements ITestListener
         }
 
         public synchronized void onTestSuccess(ITestResult result) {
-            System.out.println((result.getMethod().getMethodName() + " passed!"));
+            System.out.println(("->"+result.getMethod().getMethodName() + "==>passed!"));
             test.get().pass("Test passed");
-          //  test.get().pass(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromBase64String(takeScreenshot(),result.getMethod().getMethodName()).build());
+            test.get().pass(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromBase64String(takeScreenshot(),result.getMethod().getMethodName()).build());
             test.get().getModel().setEndTime(getTime(result.getEndMillis()));
         }
 
         public synchronized void onTestFailure(ITestResult result) {
-            System.out.println((result.getMethod().getMethodName() + " Test failed x"));
+            System.out.println(("->"+result.getMethod().getMethodName() + "->Test failed!!!!!!"));
             test.get().fail(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromBase64String(takeScreenshot(),result.getMethod().getMethodName()).build());
             test.get().getModel().setEndTime(getTime(result.getEndMillis()));
         }
 
         public synchronized void onTestSkipped(ITestResult result) {
-            System.out.println((result.getMethod().getMethodName() + " skipped!"));
+            System.out.println(("->"+result.getMethod().getMethodName() + " skipped!"));
             test.get().skip(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromBase64String(takeScreenshot(), result.getMethod().getMethodName()).build());
             test.get().getModel().setEndTime(getTime(result.getEndMillis()));
         }

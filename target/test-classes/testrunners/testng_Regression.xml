@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="5" name="Regression Suite Opencart Site Automated Test Cases" parallel="tests" verbose="-1">
+<suite thread-count="5" name="Regression-Suite OpencartSite Test Cases" parallel="tests" verbose="-1">
     <listeners>
         <listener class-name="com.qa.opencart.listeners.ExtentReportListener"/>
 	</listeners>
