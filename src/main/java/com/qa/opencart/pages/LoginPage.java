@@ -3,7 +3,7 @@ package com.qa.opencart.pages;
 import com.microsoft.playwright.Page;
 
 public class LoginPage {
-    private Page page;
+    Page page;
 
     private final String emailId = "//input[@id='input-email']";
     private final String pass = "//input[@id='input-password']";

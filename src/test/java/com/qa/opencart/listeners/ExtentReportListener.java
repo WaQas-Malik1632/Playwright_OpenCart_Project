@@ -16,7 +16,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Properties;
 
 public class ExtentReportListener implements ITestListener
 {
