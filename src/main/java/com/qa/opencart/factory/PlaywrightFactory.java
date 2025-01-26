@@ -15,8 +15,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Base64;
 import java.util.Properties;
 
-public class PlaywrightFactory {
-
+public class PlaywrightFactory
+{
     /*
     Playwright playwright;
     Browser browser;
@@ -31,39 +31,47 @@ public class PlaywrightFactory {
     private static final ThreadLocal<BrowserContext> tlBrowserContext = new ThreadLocal<>();
     private static final ThreadLocal<Page> tlPage = new ThreadLocal<>();
 
-
-    public static Playwright getPlaywright() {
+    public static Playwright getPlaywright()
+    {
 
         return tlPlaywright.get();
     }
 
-    public static Browser getBrowser() {
+    public static Browser getBrowser()
+    {
 
         return tlBrowser.get();
     }
 
-    public static BrowserContext getBrowserContext() {
+    public static BrowserContext getBrowserContext()
+    {
 
         return tlBrowserContext.get();
     }
 
-    public static Page getPage() {
+    public static Page getPage()
+    {
 
         return tlPage.get();
     }
 
-    public Properties init_prop() {
+    public Properties init_prop()
+    {
         Properties prop = new Properties();
-        try (FileInputStream ip = new FileInputStream("./src/test/resources/config/config.properties")) {
+        try (FileInputStream ip = new FileInputStream("./src/test/resources/config/config.properties"))
+        {
             prop.load(ip);
-        } catch (IOException e) {
+        }
+        catch (IOException e)
+        {
             System.err.println("Error loading configuration file: " + e.getMessage());
             e.printStackTrace();
         }
         return prop;
     }
 
-    public Page initBrowser(Properties prop) {
+    public Page initBrowser(Properties prop)
+    {
 
         String browserName = prop.getProperty("browser").trim();
         System.out.println("Launching Browser: " + browserName);
@@ -73,10 +81,11 @@ public class PlaywrightFactory {
         int height = (int) screenSize.getHeight();
         System.out.println("Your screen size is->" + width + ":" + height);
 
-       // playwright = Playwright.create();
+        // playwright = Playwright.create();
         tlPlaywright.set(Playwright.create());
 
-        switch (browserName.toLowerCase()) {
+        switch (browserName.toLowerCase())
+        {
             case "chromium":
                 //browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(2000));
                 tlBrowser.set(getPlaywright().chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(2000)));
@@ -111,7 +120,8 @@ public class PlaywrightFactory {
 
         return getPage();
     }
-    public static String takeScreenshot() {
+    public static String takeScreenshot()
+    {
         LocalDateTime date = LocalDateTime.now();
         DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd_MM_yyyy_HH-mm-ss");
         String formattedDate = date.format(myFormatObj);

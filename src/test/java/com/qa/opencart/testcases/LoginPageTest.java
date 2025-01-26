@@ -9,10 +9,12 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class LoginPageTest extends BaseTest {
+public class LoginPageTest extends BaseTest
+{
 
     @Test(priority = 3, enabled = false)
-    public void loginPageNavigationTest() {
+    public void loginPageNavigationTest()
+    {
         Login = home.navigateToLogin();
         String actualLoginPageTitle = Login.getLoginPageTitle();
         System.out.println("Actual Login Page Title is:" + actualLoginPageTitle);
@@ -21,18 +23,21 @@ public class LoginPageTest extends BaseTest {
     }
 
     @Test(priority = 4 ,enabled=false)
-    public void ForgotLinkExistTest() {
+    public void ForgotLinkExistTest()
+    {
         Assert.assertTrue(Login.isForgetPassLinkExists());
 
     }
 
     @Test(priority = 2, enabled=false)
-    public void appLoginTest() {
+    public void appLoginTest()
+    {
         Assert.assertTrue(Login.doLogin(prop.getProperty("username"),prop.getProperty("password")));
     }
 
     @Test(priority = -1, enabled=true)
-    public void ArrayOperations() {
+    public void ArrayOperations()
+    {
 
         PlaywrightFactory.takeScreenshot();
 
@@ -46,8 +51,10 @@ public class LoginPageTest extends BaseTest {
         System.out.println("\n"+"Sorted Numbers are:" +Arrays.toString(arr));
 
         int max = arr[0];
-        for (int i = 0; i <arr.length; i++) {
-            if (arr[i] > max) {
+        for (int i = 0; i <arr.length; i++)
+        {
+            if (arr[i] > max)
+            {
                 max = arr[i];
             }
         }
@@ -65,7 +72,8 @@ public class LoginPageTest extends BaseTest {
       //  String originalString = scanner.nextLine();   // Read the input string
 
         String reversedString = "";                   // Initialize an empty string to store the reversed result
-        for (int i = originalString.length() - 1; i >= 0; i--) { // Loop from the end of the string to the beginning
+        for (int i = originalString.length() - 1; i >= 0; i--)
+        { // Loop from the end of the string to the beginning
             reversedString = reversedString + originalString.charAt(i);   // Append each character in reverse order
         }
 

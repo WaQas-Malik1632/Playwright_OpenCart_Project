@@ -2,7 +2,8 @@ package com.qa.opencart.pages;
 
 import com.microsoft.playwright.Page;
 
-public class HomePage {
+public class HomePage
+{
 
     private Page page;
 
@@ -12,26 +13,30 @@ public class HomePage {
     private final String myAccountLink="//span[normalize-space()='My Account']";
     private final String loginLink="a:text('login')";
 
-    public HomePage(Page page) {
+    public HomePage(Page page)
+    {
 
         this.page = page;
     }
 
-    public String getHomePageTitle() {
+    public String getHomePageTitle()
+    {
 
         String title = page.title();
         System.out.println("Page Title is: " + title);
         return title;
     }
 
-    public String getHomePageUrl() {
+    public String getHomePageUrl()
+    {
 
         String URL = page.url();
         System.out.println("Url is: " + URL);
         return URL;
     }
 
-    public String doSearch(String ProductName) {
+    public String doSearch(String ProductName)
+    {
 
         page.fill(search, ProductName);
         page.click(searchIcon);
@@ -41,7 +46,8 @@ public class HomePage {
 
         return header;
     }
-    public LoginPage navigateToLogin(){
+    public LoginPage navigateToLogin()
+    {
         page.click(myAccountLink);
         page.click(loginLink);
 

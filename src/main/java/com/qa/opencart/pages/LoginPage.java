@@ -2,7 +2,8 @@ package com.qa.opencart.pages;
 
 import com.microsoft.playwright.Page;
 
-public class LoginPage {
+public class LoginPage
+{
     Page page;
 
     private final String emailId = "//input[@id='input-email']";
@@ -17,22 +18,26 @@ public class LoginPage {
         this.page = page;
     }
 
-    public String getLoginPageTitle() {
+    public String getLoginPageTitle()
+    {
         return page.title();
     }
 
-    public boolean isForgetPassLinkExists() {
+    public boolean isForgetPassLinkExists()
+    {
         return page.isVisible(clickForgotPassword);
     }
 
-    public boolean doLogin(String appUserName, String appPassword) {
+    public boolean doLogin(String appUserName, String appPassword)
+    {
         System.out.println("App Credentials:" + appUserName + " : " + appPassword);
         page.fill(emailId, appUserName);
         page.fill(pass, appPassword);
 
         page.click(loginBtnClick);
 
-        if (page.isVisible(logoutBtn)) {
+        if (page.isVisible(logoutBtn))
+        {
             System.out.println("User is logged in successfully->" + appUserName);
             return true;
         }

@@ -27,14 +27,19 @@ public class ExtentReportListener implements ITestListener
         private static ExtentReports extentReports;
 
 
-        private static ExtentReports init() {
+        private static ExtentReports init()
+        {
 
             Path path = Paths.get(OUTPUT_FOLDER);
             // if directory exists?
-            if (!Files.exists(path)) {
-                try {
+            if (!Files.exists(path))
+            {
+                try
+                {
                     Files.createDirectories(path);
-                } catch (IOException e) {
+                }
+                catch (IOException e)
+                {
                     // fail to create directory
                     e.printStackTrace();
                 }
@@ -57,20 +62,23 @@ public class ExtentReportListener implements ITestListener
         }
 
         @Override
-        public synchronized void onStart(ITestContext context) {
+        public synchronized void onStart(ITestContext context)
+        {
             System.out.println("Test Suite Execution started!");
 
         }
 
         @Override
-        public synchronized void onFinish(ITestContext context) {
+        public synchronized void onFinish(ITestContext context)
+        {
             System.out.println(("Test Suite execution is ending!"));
             extent.flush();
             test.remove();
         }
 
         @Override
-        public synchronized void onTestStart(ITestResult result) {
+        public synchronized void onTestStart(ITestResult result)
+        {
             String methodName = result.getMethod().getMethodName();
             String qualifiedName = result.getMethod().getQualifiedName();
             int last = qualifiedName.lastIndexOf(".");
@@ -91,30 +99,35 @@ public class ExtentReportListener implements ITestListener
             test.get().getModel().setStartTime(getTime(result.getStartMillis()));
         }
 
-        public synchronized void onTestSuccess(ITestResult result) {
+        public synchronized void onTestSuccess(ITestResult result)
+        {
             System.out.println(("->"+result.getMethod().getMethodName() + "==>passed!"));
             test.get().pass("Test passed");
             test.get().pass(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromBase64String(takeScreenshot(),result.getMethod().getMethodName()).build());
             test.get().getModel().setEndTime(getTime(result.getEndMillis()));
         }
 
-        public synchronized void onTestFailure(ITestResult result) {
+        public synchronized void onTestFailure(ITestResult result)
+        {
             System.out.println(("->"+result.getMethod().getMethodName() + "->Test failed!!!!!!"));
             test.get().fail(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromBase64String(takeScreenshot(),result.getMethod().getMethodName()).build());
             test.get().getModel().setEndTime(getTime(result.getEndMillis()));
         }
 
-        public synchronized void onTestSkipped(ITestResult result) {
+        public synchronized void onTestSkipped(ITestResult result)
+        {
             System.out.println(("->"+result.getMethod().getMethodName() + " skipped!"));
             test.get().skip(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromBase64String(takeScreenshot(), result.getMethod().getMethodName()).build());
             test.get().getModel().setEndTime(getTime(result.getEndMillis()));
         }
 
-        public synchronized void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+        public synchronized void onTestFailedButWithinSuccessPercentage(ITestResult result)
+        {
             System.out.println(("onTestFailedButWithinSuccessPercentage for " + result.getMethod().getMethodName()));
         }
 
-        private Date getTime(long millis) {
+        private Date getTime(long millis)
+        {
             Calendar calendar = Calendar.getInstance();
             calendar.setTimeInMillis(millis);
             return calendar.getTime();

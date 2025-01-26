@@ -9,8 +9,8 @@ import org.testng.annotations.AfterTest;
 
 import java.util.Properties;
 
-public class BaseTest {
-
+public class BaseTest
+{
     PlaywrightFactory pf;
     Page page;
     Properties prop;
@@ -18,7 +18,8 @@ public class BaseTest {
     protected LoginPage Login;
 
     @BeforeTest
-    public void Setup() {
+    public void Setup()
+    {
 
         pf = new PlaywrightFactory();
         prop = pf.init_prop();
@@ -27,7 +28,8 @@ public class BaseTest {
     }
 
     @AfterTest
-    public void Teardown() {
+    public void Teardown()
+    {
         page.context().browser().close();
     }
 
