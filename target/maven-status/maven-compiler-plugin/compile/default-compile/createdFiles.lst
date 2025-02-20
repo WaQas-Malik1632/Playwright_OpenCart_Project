@@ -1,0 +1,4 @@
+com\qa\opencart\pages\HomePage.class
+com\qa\opencart\factory\PlaywrightFactory.class
+com\qa\opencart\constants\AppConstants.class
+com\qa\opencart\pages\LoginPage.class
