@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Regression Test_Edge->Home Page</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 20 12:08:29 PKT 2025</td>
+<td>Started on:</td><td>Fri Feb 21 10:15:59 PKT 2025</td>
 </tr>
-<tr><td>Total time:</td><td>70 seconds (70784 ms)</td>
+<tr><td>Total time:</td><td>18 seconds (18085 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,143 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.qa.opencart.testcases.LoginPageTest.Setup()'><b>Setup</b><br>Test class: com.qa.opencart.testcases.LoginPageTest</td>
-<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\progress.js:75:26)
-    at Frame.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\frames.js:521:23)
-    at FrameDispatcher.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\frameDispatcher.js:82:119)
-    at FrameDispatcher._handleCommand (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
--   - navigating to &quot;https://naveenautomationlabs.com/opencart/&quot;, waiting until &quot;load&quot;
-
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
-	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
-	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$47(PageImpl.java:943)
-	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
-	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:943)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
-	at com.microsoft.playwright.Page.navigate(Page.java:5474)
-	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:119)
-	at com.qa.opencart.testcases.BaseTest.Setup(BaseTest.java:26)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\progress.js:75:26)
-    at Frame.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\frames.js:521:23)
-    at FrameDispatcher.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\frameDispatcher.js:82:119)
-    at FrameDispatcher._handleCommand (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
--   - navigating to &quot;https://naveenautomationlabs.com/opencart/&quot;, waiting until &quot;load&quot;
-
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
-	... 27 more
-... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace334572583", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace334572583'><pre>com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\progress.js:75:26)
-    at Frame.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\frames.js:521:23)
-    at FrameDispatcher.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\frameDispatcher.js:82:119)
-    at FrameDispatcher._handleCommand (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
--   - navigating to &quot;https://naveenautomationlabs.com/opencart/&quot;, waiting until &quot;load&quot;
-
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
-	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
-	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$47(PageImpl.java:943)
-	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
-	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:943)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
-	at com.microsoft.playwright.Page.navigate(Page.java:5474)
-	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:119)
-	at com.qa.opencart.testcases.BaseTest.Setup(BaseTest.java:26)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:644)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\progress.js:75:26)
-    at Frame.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\frames.js:521:23)
-    at FrameDispatcher.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\frameDispatcher.js:82:119)
-    at FrameDispatcher._handleCommand (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
--   - navigating to &quot;https://naveenautomationlabs.com/opencart/&quot;, waiting until &quot;load&quot;
-
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
-	... 27 more
-</pre></div></td>
-<td>59</td>
-<td>com.qa.opencart.testcases.LoginPageTest@5d0bf09b</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.qa.opencart.testcases.LoginPageTest.Teardown()'><b>Teardown</b><br>Test class: com.qa.opencart.testcases.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>com.qa.opencart.testcases.LoginPageTest@5d0bf09b</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -212,114 +77,7 @@ Call log:
 </tr>
 <tr>
 <td title='com.qa.opencart.testcases.LoginPageTest.ArrayOperations()'><b>ArrayOperations</b><br>Test class: com.qa.opencart.testcases.LoginPageTest</td>
-<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\progress.js:75:26)
-    at Frame.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\frames.js:521:23)
-    at FrameDispatcher.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\frameDispatcher.js:82:119)
-    at FrameDispatcher._handleCommand (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
--   - navigating to &quot;https://naveenautomationlabs.com/opencart/&quot;, waiting until &quot;load&quot;
-
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
-	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
-	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$47(PageImpl.java:943)
-	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
-	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:943)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
-	at com.microsoft.playwright.Page.navigate(Page.java:5474)
-	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:119)
-	at com.qa.opencart.testcases.BaseTest.Setup(BaseTest.java:26)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\progress.js:75:26)
-    at Frame.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\frames.js:521:23)
-    at FrameDispatcher.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\frameDispatcher.js:82:119)
-    at FrameDispatcher._handleCommand (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
--   - navigating to &quot;https://naveenautomationlabs.com/opencart/&quot;, waiting until &quot;load&quot;
-
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
-	... 27 more
-... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace92184657", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace92184657'><pre>com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\progress.js:75:26)
-    at Frame.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\frames.js:521:23)
-    at FrameDispatcher.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\frameDispatcher.js:82:119)
-    at FrameDispatcher._handleCommand (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
--   - navigating to &quot;https://naveenautomationlabs.com/opencart/&quot;, waiting until &quot;load&quot;
-
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
-	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
-	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$47(PageImpl.java:943)
-	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
-	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:943)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
-	at com.microsoft.playwright.Page.navigate(Page.java:5474)
-	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:119)
-	at com.qa.opencart.testcases.BaseTest.Setup(BaseTest.java:26)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:644)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\progress.js:75:26)
-    at Frame.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\frames.js:521:23)
-    at FrameDispatcher.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\frameDispatcher.js:82:119)
-    at FrameDispatcher._handleCommand (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
--   - navigating to &quot;https://naveenautomationlabs.com/opencart/&quot;, waiting until &quot;load&quot;
-
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
-	... 27 more
-</pre></div></td>
+<td></td>
 <td>0</td>
 <td>com.qa.opencart.testcases.LoginPageTest@5d0bf09b</td></tr>
 </table><p>

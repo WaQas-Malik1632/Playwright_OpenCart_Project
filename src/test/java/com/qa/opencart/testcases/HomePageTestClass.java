@@ -25,14 +25,11 @@ public class HomePageTestClass extends BaseTest
     }
 
     @DataProvider
-    public Object[][] getProductData()
+    public Object[] getProductData()
     {
-
-        return new Object[][]
+        return new Object[]
                 {
-                        {"Macbook"},
-                        {"iMac"},
-                        {"Samsung"},
+                        "Macbook", "iMac", "Samsung"
                 };
     }
 

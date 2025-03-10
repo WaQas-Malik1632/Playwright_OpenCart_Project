@@ -1,113 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="87.592" tests="8" errors="0" skipped="2" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="31.952" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Program Files\apache-maven-3.8.8\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.1\plugins\maven\lib\maven3\boot\plexus-classworlds-2.8.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.1\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Asia/Karachi"/>
-    <property name="maven.conf" value="C:\Program Files\apache-maven-3.8.8/conf"/>
+    <property name="maven.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.1\plugins\maven\lib\maven3/conf"/>
     <property name="java.vm.specification.version" value="21"/>
     <property name="os.name" value="Windows 11"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\jdk-21.0.5\bin"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2024.3.3 install"/>
     <property name="jdk.debug" value="release"/>
-    <property name="maven.home" value="C:\Program Files\apache-maven-3.8.8"/>
+    <property name="maven.home" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.1\plugins\maven\lib\maven3"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\Waqas"/>
+    <property name="user.home" value="C:\Users\waqas.naseer"/>
     <property name="user.language" value="en"/>
+    <property name="sun.stderr.encoding" value="UTF-8"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2024-10-15"/>
-    <property name="java.home" value="C:\Program Files\jdk-21.0.5"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
     <property name="file.separator" value="\"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="21.0.5+9-LTS-239"/>
-    <property name="user.name" value="Waqas"/>
-    <property name="stdout.encoding" value="cp437"/>
+    <property name="java.runtime.version" value="21.0.3+7-LTS-152"/>
+    <property name="user.name" value="waqas.naseer"/>
+    <property name="stdout.encoding" value="UTF-8"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.1\plugins\maven\lib\maven-event-listener.jar"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="C:\Users\Waqas\AppData\Local\Temp\"/>
-    <property name="java.version" value="21.0.5"/>
-    <property name="user.dir" value="E:\Playwright Projects\Playwright_OpenCart_Project"/>
+    <property name="java.io.tmpdir" value="C:\Users\WAQAS~1.NAS\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2024.3.3"/>
+    <property name="java.version" value="21.0.3"/>
+    <property name="user.dir" value="D:\Playwright\Playwright_OpenCart_Project"/>
     <property name="os.arch" value="amd64"/>
-    <property name="maven.multiModuleProjectDirectory" value="E:\Playwright Projects\Playwright_OpenCart_Project"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Playwright\Playwright_OpenCart_Project"/>
+    <property name="jansi.passthrough" value="true"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\jdk-21.0.5\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.8\bin;C:\Program Files\allure-2.32.0\bin;C:\Program Files\WireGuard\;C:\Program Files\Git\cmd;C:\Program Files\jdk-21.0.5\bin;C:\Users\Waqas\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\WireGuard\;C:\Program Files\apache-maven-3.9.9\bin;C:\Program Files\allure-2.32.0\bin;C:\Program Files\Java\jdk-21\bin;C:\Program Files\Git\cmd;C:\Users\waqas.naseer\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.1\bin;;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="stderr.encoding" value="cp437"/>
+    <property name="stderr.encoding" value="UTF-8"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="21.0.5+9-LTS-239"/>
-    <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.8.8\bin\m2.conf"/>
+    <property name="java.vm.version" value="21.0.3+7-LTS-152"/>
+    <property name="classworlds.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.2.1\plugins\maven\lib\maven3\bin\m2.conf"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="library.jansi.path" value="C:\Program Files\apache-maven-3.8.8\lib\jansi-native"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="HomePageUrlVerification" classname="com.qa.opencart.testcases.HomePageTestClass" time="2.357"/>
-  <testcase name="HomePageTitle" classname="com.qa.opencart.testcases.HomePageTestClass" time="1.599"/>
-  <testcase name="Setup" classname="com.qa.opencart.testcases.LoginPageTest" time="3.118">
-    <failure message="Error {&#10;  message=&apos;Timeout 30000ms exceeded.&#10;  name=&apos;TimeoutError&#10;  stack=&apos;TimeoutError: Timeout 30000ms exceeded.&#10;    at ProgressController.run (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\progress.js:75:26)&#10;    at Frame.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\frames.js:521:23)&#10;    at FrameDispatcher.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\frameDispatcher.js:82:119)&#10;    at FrameDispatcher._handleCommand (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:94:40)&#10;    at DispatcherConnection.dispatch (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:361:39)&#10;}&#10;Call log:&#10;-   - navigating to &quot;https://naveenautomationlabs.com/opencart/&quot;, waiting until &quot;load&quot;&#10;" type="com.microsoft.playwright.TimeoutError">com.microsoft.playwright.TimeoutError: 
-Error {
-  message='Timeout 30000ms exceeded.
-  name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\progress.js:75:26)
-    at Frame.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\frames.js:521:23)
-    at FrameDispatcher.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\frameDispatcher.js:82:119)
-    at FrameDispatcher._handleCommand (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
--   - navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
-
-Caused by: com.microsoft.playwright.TimeoutError: 
-Error {
-  message='Timeout 30000ms exceeded.
-  name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\progress.js:75:26)
-    at Frame.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\frames.js:521:23)
-    at FrameDispatcher.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\frameDispatcher.js:82:119)
-    at FrameDispatcher._handleCommand (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
--   - navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
-
-</failure>
-    <system-out><![CDATA[HomePageSearch started!
-]]></system-out>
-  </testcase>
-  <testcase name="ArrayOperations" classname="com.qa.opencart.testcases.LoginPageTest" time="0">
-    <skipped message="Error {&#10;  message=&apos;Timeout 30000ms exceeded.&#10;  name=&apos;TimeoutError&#10;  stack=&apos;TimeoutError: Timeout 30000ms exceeded.&#10;    at ProgressController.run (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\progress.js:75:26)&#10;    at Frame.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\frames.js:521:23)&#10;    at FrameDispatcher.goto (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\frameDispatcher.js:82:119)&#10;    at FrameDispatcher._handleCommand (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:94:40)&#10;    at DispatcherConnection.dispatch (C:\Users\Waqas\AppData\Local\Temp\playwright-java-15619235558210275153\package\lib\server\dispatchers\dispatcher.js:361:39)&#10;}&#10;Call log:&#10;-   - navigating to &quot;https://naveenautomationlabs.com/opencart/&quot;, waiting until &quot;load&quot;&#10;"/>
-    <system-out><![CDATA[ArrayOperations started!
-->ArrayOperations skipped!
-Search product name: Search - Macbook
-]]></system-out>
-  </testcase>
-  <testcase name="Teardown" classname="com.qa.opencart.testcases.LoginPageTest" time="0">
-    <skipped/>
-    <system-out><![CDATA[->HomePageSearch==>passed!
-]]></system-out>
-  </testcase>
-  <testcase name="HomePageSearch" classname="com.qa.opencart.testcases.HomePageTestClass" time="11.84"/>
-  <testcase name="HomePageSearch" classname="com.qa.opencart.testcases.HomePageTestClass" time="6.736"/>
-  <testcase name="HomePageSearch" classname="com.qa.opencart.testcases.HomePageTestClass" time="5.428"/>
+  <testcase name="HomePageUrlVerification" classname="com.qa.opencart.testcases.HomePageTestClass" time="0.326"/>
+  <testcase name="HomePageTitle" classname="com.qa.opencart.testcases.HomePageTestClass" time="0.29"/>
+  <testcase name="ArrayOperations" classname="com.qa.opencart.testcases.LoginPageTest" time="0.302"/>
+  <testcase name="HomePageSearch" classname="com.qa.opencart.testcases.HomePageTestClass" time="4.528"/>
+  <testcase name="HomePageSearch" classname="com.qa.opencart.testcases.HomePageTestClass" time="4.462"/>
+  <testcase name="HomePageSearch" classname="com.qa.opencart.testcases.HomePageTestClass" time="4.546"/>
 </testsuite>
