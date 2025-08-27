@@ -1,18 +1,13 @@
 package com.qa.opencart.testcases;
 
 import com.qa.opencart.constants.AppConstants;
-import com.qa.opencart.factory.PlaywrightFactory;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Scanner;
 
 public class LoginPageTest extends BaseTest
 {
-
-    @Test(priority = 3, enabled = false)
+    @Test(priority = 1, enabled = true)
     public void loginPageNavigationTest()
     {
         Login = home.navigateToLogin();
@@ -22,61 +17,33 @@ public class LoginPageTest extends BaseTest
         Assert.assertEquals(actualLoginPageTitle, AppConstants.LOGIN_PAGE_TITLE);
     }
 
-    @Test(priority = 4 ,enabled=false)
+    @Test(priority = 2 ,enabled=true)
     public void ForgotLinkExistTest()
     {
         Assert.assertTrue(Login.isForgetPassLinkExists());
 
     }
-
-    @Test(priority = 2, enabled=false)
-    public void appLoginTest()
+    @DataProvider(name = "loginData")
+    public Object[][] getUsersData()
     {
-        Assert.assertTrue(Login.doLogin(prop.getProperty("username"),prop.getProperty("password")));
+        return new Object[][]{
+                        {"WebUser@youpmail.com", "Demo@1234"},
+                        {"Waqas@gmail.com", "Test@123"},
+                        {"User@mail.com", "123@Demo"},
+                        {"Testerqaw@youpmail.com", "Playwright@123"}
+        };
     }
 
-    @Test(priority = -1, enabled=true)
-    public void ArrayOperations()
+    @Test(priority = 3, dataProvider = "loginData", enabled = true)
+    public void appLoginTest(String userEmail, String pass)
     {
+        // if we want to get the user credentials from Config file
+       // Assert.assertTrue(Login.doLogin(prop.getProperty("username"),prop.getProperty("password")));
 
-        PlaywrightFactory.takeScreenshot();
+        // Perform login using data provider credentials
+        boolean loginStatus = Login.doLogin(userEmail, pass);
 
-        Integer[] arr = {223, 100, 856, 3};
-        System.out.println("Numbers are:" +Arrays.toString(arr));
-
-         Arrays.sort(arr);  //Sort array in Ascending order
-
-       // Arrays.sort(arr, Collections.reverseOrder()); //Sort array in reverse order
-
-        System.out.println("\n"+"Sorted Numbers are:" +Arrays.toString(arr));
-
-        int max = arr[0];
-        for (int i = 0; i <arr.length; i++)
-        {
-            if (arr[i] > max)
-            {
-                max = arr[i];
-            }
-        }
-        System.out.println("Maximum number is:" + max);
-
-        String originalString="civic";
-        System.out.println("Original String is:" +originalString);
-/*
-        String ReversedName=new StringBuilder(originalString).reverse().toString();
-        System.out.println("Reverse Name is:" + ReversedName);
-    */
-
-      //  Scanner scanner = new Scanner(System.in); // Create a Scanner object for user input
-       // System.out.print("Enter a string: ");    // Prompt the user to enter a string
-      //  String originalString = scanner.nextLine();   // Read the input string
-
-        String reversedString = "";                   // Initialize an empty string to store the reversed result
-        for (int i = originalString.length() - 1; i >= 0; i--)
-        { // Loop from the end of the string to the beginning
-            reversedString = reversedString + originalString.charAt(i);   // Append each character in reverse order
-        }
-
-        System.out.println("Reversed String is-> " + reversedString); // Output the reversed string
+        // Validate login
+        Assert.assertTrue(loginStatus, "Login failed for user: " + userEmail);
     }
 }

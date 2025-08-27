@@ -7,11 +7,9 @@ import org.testng.annotations.Test;
 
 public class HomePageTestClass extends BaseTest
 {
-
     @Test(priority = 1)
     public void HomePageUrlVerification()
     {
-
         String ActualUrl = home.getHomePageUrl();
         Assert.assertEquals(ActualUrl, prop.getProperty("url"));
     }
@@ -19,7 +17,6 @@ public class HomePageTestClass extends BaseTest
     @Test(priority = 2)
     public void HomePageTitle()
     {
-
         String ActualTitle = home.getHomePageTitle();
         Assert.assertEquals(ActualTitle, AppConstants.HOME_PAGE_TITLE);
     }
@@ -36,7 +33,6 @@ public class HomePageTestClass extends BaseTest
     @Test(priority = 3, dataProvider = "getProductData")
     public void HomePageSearch(String ProductName)
     {
-
         String actualSearchHeaderName = home.doSearch(ProductName);
         Assert.assertEquals(actualSearchHeaderName, "Search - " + ProductName);
     }

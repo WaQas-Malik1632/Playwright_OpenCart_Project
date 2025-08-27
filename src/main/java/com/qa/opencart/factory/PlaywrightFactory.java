@@ -33,25 +33,21 @@ public class PlaywrightFactory
 
     public static Playwright getPlaywright()
     {
-
         return tlPlaywright.get();
     }
 
     public static Browser getBrowser()
     {
-
         return tlBrowser.get();
     }
 
     public static BrowserContext getBrowserContext()
     {
-
         return tlBrowserContext.get();
     }
 
     public static Page getPage()
     {
-
         return tlPage.get();
     }
 
@@ -72,7 +68,6 @@ public class PlaywrightFactory
 
     public Page initBrowser(Properties prop)
     {
-
         String browserName = prop.getProperty("browser").trim();
         System.out.println("Launching Browser: " + browserName);
         //Capture screenSize

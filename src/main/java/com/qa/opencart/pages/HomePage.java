@@ -4,7 +4,6 @@ import com.microsoft.playwright.Page;
 
 public class HomePage
 {
-
     private Page page;
 
     private final String search = "//*[@id=\"search\"]/input";
@@ -21,7 +20,6 @@ public class HomePage
 
     public String getHomePageTitle()
     {
-
         String title = page.title();
         System.out.println("Page Title is: " + title);
         return title;
@@ -29,7 +27,6 @@ public class HomePage
 
     public String getHomePageUrl()
     {
-
         String URL = page.url();
         System.out.println("Url is: " + URL);
         return URL;
@@ -37,14 +34,14 @@ public class HomePage
 
     public String doSearch(String ProductName)
     {
-
         page.fill(search, ProductName);
         page.click(searchIcon);
 
         String header = page.textContent(searchPageHeader);
         System.out.println("Search product name: " + header);
-
+        page.evaluate("window.scrollBy(0, 600)");
         return header;
+
     }
     public LoginPage navigateToLogin()
     {

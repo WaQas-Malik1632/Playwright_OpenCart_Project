@@ -20,17 +20,17 @@ public class BaseTest
     @BeforeTest
     public void Setup()
     {
-
         pf = new PlaywrightFactory();
         prop = pf.init_prop();
         page = pf.initBrowser(prop);
+        Login= new LoginPage(page);
         home = new HomePage(page);
     }
 
     @AfterTest
     public void Teardown()
     {
-        page.context().browser().close();
+       // page.context().browser().close();
     }
 
 }

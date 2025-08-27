@@ -4,17 +4,16 @@ import com.microsoft.playwright.Page;
 
 public class LoginPage
 {
-    Page page;
+    private Page page;
 
     private final String emailId = "//input[@id='input-email']";
     private final String pass = "//input[@id='input-password']";
     private final String loginBtnClick = "//input[@value='Login']";
-
     private final String clickForgotPassword = "//div[@class='form-group']//a[normalize-space()='Forgotten Password']";
-
     private final String logoutBtn = "//a[@class='list-group-item'][normalize-space()='Logout']";
 
-    public LoginPage(Page page) {
+    public LoginPage(Page page)
+    {
         this.page = page;
     }
 
@@ -28,12 +27,16 @@ public class LoginPage
         return page.isVisible(clickForgotPassword);
     }
 
+
     public boolean doLogin(String appUserName, String appPassword)
     {
-        System.out.println("App Credentials:" + appUserName + " : " + appPassword);
+        System.out.println("App Credentials: " + appUserName + " : " + appPassword);
+
+        // Fill in login fields
         page.fill(emailId, appUserName);
         page.fill(pass, appPassword);
 
+        // Click on login button
         page.click(loginBtnClick);
 
         if (page.isVisible(logoutBtn))
@@ -44,3 +47,4 @@ public class LoginPage
         return false;
     }
 }
+
