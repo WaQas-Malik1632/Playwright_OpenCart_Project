@@ -36,5 +36,11 @@ public class HomePageTestClass extends BaseTest
         String actualSearchHeaderName = home.doSearch(ProductName);
         Assert.assertEquals(actualSearchHeaderName, "Search - " + ProductName);
     }
+    @Test(priority = 4)
+    public void viewProdDetails()
+    {
+        home.viewProductDetails();
+    }
+
 
 }

@@ -6,15 +6,21 @@ public class HomePage
 {
     private Page page;
 
+    private final String myAccountLink="//span[normalize-space()='My Account']";
+    private final String loginLink="a:text('login')";
     private final String search = "//*[@id=\"search\"]/input";
     private final String searchIcon = "//*[@id=\"search\"]/span/button";
     private final String searchPageHeader = "div#content h1";
-    private final String myAccountLink="//span[normalize-space()='My Account']";
-    private final String loginLink="a:text('login')";
+    //Product detail page
+    private final String ProdCLick="//img[@title=\"Samsung Galaxy Tab 10.1\"]";
+    private final String ProdImgView="//ul[@class='thumbnails']//li[1]//a[1]";
+    private final String rightArrowClick="//button[@title='Next (Right arrow key)']";
+    private final String closeImgIcon="//button[@title='Close (Esc)']";
+    private final String productDetailText="//*[@id=\"tab-description\"]/p[1]/text()";
+
 
     public HomePage(Page page)
     {
-
         this.page = page;
     }
 
@@ -39,10 +45,23 @@ public class HomePage
 
         String header = page.textContent(searchPageHeader);
         System.out.println("Search product name: " + header);
-        page.evaluate("window.scrollBy(0, 600)");
+      //  page.evaluate("window.scrollBy(0, 600)");
+        page.click(ProdCLick);
         return header;
 
     }
+    public void viewProductDetails()
+    {
+        page.click(ProdImgView);
+        page.click(rightArrowClick);
+        page.click(closeImgIcon);
+        page.evaluate("window.scrollBy(0, 400)");
+        System.out.println("Product image closed:");
+        String productDescText = page.getByText(productDetailText).textContent();
+        System.out.println("Product description: "+productDescText);
+
+    }
+
     public LoginPage navigateToLogin()
     {
         page.click(myAccountLink);
@@ -50,5 +69,6 @@ public class HomePage
 
         return new LoginPage(page);
     }
+
 
 }

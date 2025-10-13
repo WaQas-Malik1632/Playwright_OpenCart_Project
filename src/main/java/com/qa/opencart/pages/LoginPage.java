@@ -27,7 +27,6 @@ public class LoginPage
         return page.isVisible(clickForgotPassword);
     }
 
-
     public boolean doLogin(String appUserName, String appPassword)
     {
         System.out.println("App Credentials: " + appUserName + " : " + appPassword);
