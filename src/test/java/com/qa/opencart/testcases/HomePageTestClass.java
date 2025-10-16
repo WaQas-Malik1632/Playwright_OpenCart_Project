@@ -7,14 +7,14 @@ import org.testng.annotations.Test;
 
 public class HomePageTestClass extends BaseTest
 {
-    @Test(priority = 1)
+    @Test(priority = 1, enabled = true)
     public void HomePageUrlVerification()
     {
         String ActualUrl = home.getHomePageUrl();
         Assert.assertEquals(ActualUrl, prop.getProperty("url"));
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, enabled = true)
     public void HomePageTitle()
     {
         String ActualTitle = home.getHomePageTitle();
@@ -30,16 +30,26 @@ public class HomePageTestClass extends BaseTest
                 };
     }
 
-    @Test(priority = 3, dataProvider = "getProductData")
+    @Test(priority = 3, dataProvider = "getProductData", enabled = true)
     public void HomePageSearch(String ProductName)
     {
         String actualSearchHeaderName = home.doSearch(ProductName);
         Assert.assertEquals(actualSearchHeaderName, "Search - " + ProductName);
     }
-    @Test(priority = 4)
+    @Test(priority = 4, enabled = true)
     public void viewProdDetails()
     {
         home.viewProductDetails();
+        String actualProductDesc = home.viewProductDetails();
+        String expectedDescText= "Samsung Galaxy Tab 10.1, is the world’s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.";
+        Assert.assertEquals(actualProductDesc,expectedDescText, "Product description does not match!");
+    }
+
+    @Test(priority = 5, enabled = true)
+    public void addProdReview()
+    {
+        home.addProductReview();
+        Assert.assertTrue(true);
     }
 
 

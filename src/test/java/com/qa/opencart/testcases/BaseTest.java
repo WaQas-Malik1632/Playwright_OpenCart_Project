@@ -23,14 +23,13 @@ public class BaseTest
         pf = new PlaywrightFactory();
         prop = pf.init_prop();
         page = pf.initBrowser(prop);
-        Login= new LoginPage(page);
+        Login = new LoginPage(page);
         home = new HomePage(page);
     }
 
     @AfterTest
     public void Teardown()
     {
-       // page.context().browser().close();
     }
 
 }

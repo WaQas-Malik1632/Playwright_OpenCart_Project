@@ -16,7 +16,11 @@ public class HomePage
     private final String ProdImgView="//ul[@class='thumbnails']//li[1]//a[1]";
     private final String rightArrowClick="//button[@title='Next (Right arrow key)']";
     private final String closeImgIcon="//button[@title='Close (Esc)']";
-    private final String productDetailText="//*[@id=\"tab-description\"]/p[1]/text()";
+
+    private final String reviewSectionClick="//a[normalize-space()='Reviews (0)']";
+    private final String reviewName="//input[@id='input-name']";
+    private final String reviewMsg="//textarea[@id='input-review']";
+    private final String rating4="//*[@id=\"form-review\"]/div[4]/div/input[4]";
 
 
     public HomePage(Page page)
@@ -50,16 +54,25 @@ public class HomePage
         return header;
 
     }
-    public void viewProductDetails()
+    public String viewProductDetails()
     {
         page.click(ProdImgView);
         page.click(rightArrowClick);
         page.click(closeImgIcon);
-        page.evaluate("window.scrollBy(0, 400)");
-        System.out.println("Product image closed:");
-        String productDescText = page.getByText(productDetailText).textContent();
-        System.out.println("Product description: "+productDescText);
+        System.out.println("Product image closed");
+        page.evaluate("window.scrollBy(0, 500)");
 
+        String productDescText = page.locator("xpath=//p[contains(text(),'Samsung Galaxy Tab 10.1, is the world’s thinnest t')]").textContent().trim();
+
+        return productDescText;
+    }
+    public String addProductReview()
+    {
+        page.click(reviewSectionClick);
+        page.fill(reviewName,"Tester QA");
+        page.fill(reviewMsg, "This Samsung Product is amazing");
+        page.click(rating4);
+        return rating4;
     }
 
     public LoginPage navigateToLogin()
