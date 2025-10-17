@@ -4,6 +4,7 @@ import com.microsoft.playwright.Page;
 import com.qa.opencart.factory.PlaywrightFactory;
 import com.qa.opencart.pages.HomePage;
 import com.qa.opencart.pages.LoginPage;
+import com.qa.opencart.pages.OrderPageClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 
@@ -16,6 +17,7 @@ public class BaseTest
     Properties prop;
     protected HomePage home;
     protected LoginPage Login;
+    protected OrderPageClass Odr;
 
     @BeforeTest
     public void Setup()
@@ -25,6 +27,7 @@ public class BaseTest
         page = pf.initBrowser(prop);
         Login = new LoginPage(page);
         home = new HomePage(page);
+        Odr=new OrderPageClass(page);
     }
 
     @AfterTest

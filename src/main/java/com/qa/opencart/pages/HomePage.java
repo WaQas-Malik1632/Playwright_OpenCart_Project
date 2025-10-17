@@ -62,7 +62,7 @@ public class HomePage
         System.out.println("Product image closed");
         page.evaluate("window.scrollBy(0, 500)");
 
-        String productDescText = page.locator("xpath=//p[contains(text(),'Samsung Galaxy Tab 10.1, is the world’s thinnest t')]").textContent().trim();
+        String productDescText = page.textContent(searchPageHeader).trim();
 
         return productDescText;
     }

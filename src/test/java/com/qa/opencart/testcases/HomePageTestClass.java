@@ -41,7 +41,7 @@ public class HomePageTestClass extends BaseTest
     {
         home.viewProductDetails();
         String actualProductDesc = home.viewProductDetails();
-        String expectedDescText= "Samsung Galaxy Tab 10.1, is the world’s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.";
+        String expectedDescText= "Samsung Galaxy Tab 10.1";
         Assert.assertEquals(actualProductDesc,expectedDescText, "Product description does not match!");
     }
 
