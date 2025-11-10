@@ -1,78 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-21T10:15:59 PKT" name="Regression-Suite OpencartSite Test Cases" finished-at="2025-02-21T10:16:30 PKT" duration-ms="31056">
+  <suite started-at="2025-11-10T16:06:45 PKT" name="Regression-Suite OpencartSite Test Cases" finished-at="2025-11-10T16:06:45 PKT" duration-ms="0">
     <groups>
     </groups>
-    <test started-at="2025-02-21T10:15:59 PKT" name="Regression Test_Edge-&gt;Home Page" finished-at="2025-02-21T10:16:17 PKT" duration-ms="18085">
-      <class name="com.qa.opencart.testcases.LoginPageTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:com.qa.opencart.testcases.LoginPageTest@5d0bf09b]" started-at="2025-02-21T10:15:59 PKT" name="Setup" finished-at="2025-02-21T10:16:16 PKT" duration-ms="16606" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="ArrayOperations()[pri:-1, instance:com.qa.opencart.testcases.LoginPageTest@5d0bf09b]" started-at="2025-02-21T10:16:16 PKT" name="ArrayOperations" finished-at="2025-02-21T10:16:16 PKT" duration-ms="652" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ArrayOperations -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.qa.opencart.testcases.LoginPageTest@5d0bf09b]" started-at="2025-02-21T10:16:17 PKT" name="Teardown" finished-at="2025-02-21T10:16:17 PKT" duration-ms="538" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Teardown -->
-      </class> <!-- com.qa.opencart.testcases.LoginPageTest -->
-    </test> <!-- Regression Test_Edge->Home Page -->
-    <test started-at="2025-02-21T10:15:59 PKT" name="Regression Test_Chrome-&gt;Home Page" finished-at="2025-02-21T10:16:30 PKT" duration-ms="31056">
-      <class name="com.qa.opencart.testcases.HomePageTestClass">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:com.qa.opencart.testcases.HomePageTestClass@3012646b]" started-at="2025-02-21T10:15:59 PKT" name="Setup" finished-at="2025-02-21T10:16:16 PKT" duration-ms="16487" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="HomePageUrlVerification()[pri:1, instance:com.qa.opencart.testcases.HomePageTestClass@3012646b]" started-at="2025-02-21T10:16:16 PKT" name="HomePageUrlVerification" finished-at="2025-02-21T10:16:16 PKT" duration-ms="12" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePageUrlVerification -->
-        <test-method signature="HomePageTitle()[pri:2, instance:com.qa.opencart.testcases.HomePageTestClass@3012646b]" started-at="2025-02-21T10:16:16 PKT" name="HomePageTitle" finished-at="2025-02-21T10:16:16 PKT" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePageTitle -->
-        <test-method signature="HomePageSearch(java.lang.String)[pri:3, instance:com.qa.opencart.testcases.HomePageTestClass@3012646b]" started-at="2025-02-21T10:16:16 PKT" name="HomePageSearch" data-provider="getProductData" finished-at="2025-02-21T10:16:21 PKT" duration-ms="4344" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Macbook]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePageSearch -->
-        <test-method signature="HomePageSearch(java.lang.String)[pri:3, instance:com.qa.opencart.testcases.HomePageTestClass@3012646b]" started-at="2025-02-21T10:16:21 PKT" name="HomePageSearch" data-provider="getProductData" finished-at="2025-02-21T10:16:25 PKT" duration-ms="4306" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[iMac]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePageSearch -->
-        <test-method signature="HomePageSearch(java.lang.String)[pri:3, instance:com.qa.opencart.testcases.HomePageTestClass@3012646b]" started-at="2025-02-21T10:16:25 PKT" name="HomePageSearch" data-provider="getProductData" finished-at="2025-02-21T10:16:30 PKT" duration-ms="4363" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Samsung]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomePageSearch -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.qa.opencart.testcases.HomePageTestClass@3012646b]" started-at="2025-02-21T10:16:30 PKT" name="Teardown" finished-at="2025-02-21T10:16:30 PKT" duration-ms="273" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Teardown -->
-      </class> <!-- com.qa.opencart.testcases.HomePageTestClass -->
-    </test> <!-- Regression Test_Chrome->Home Page -->
   </suite> <!-- Regression-Suite OpencartSite Test Cases -->
 </testng-results>

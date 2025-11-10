@@ -51,6 +51,4 @@ public class HomePageTestClass extends BaseTest
         home.addProductReview();
         Assert.assertTrue(true);
     }
-
-
 }

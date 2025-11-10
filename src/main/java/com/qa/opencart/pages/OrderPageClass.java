@@ -31,7 +31,5 @@ public class OrderPageClass
 
         page.evaluate("window.scrollBy(0, 500)");
 
-
     }
-
 }

@@ -82,6 +82,4 @@ public class HomePage
 
         return new LoginPage(page);
     }
-
-
 }

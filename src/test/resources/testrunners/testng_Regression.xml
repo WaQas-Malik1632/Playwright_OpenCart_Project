@@ -4,16 +4,22 @@
     <listeners>
         <listener class-name="com.qa.opencart.listeners.ExtentReportListener"/>
 	</listeners>
-    <test name="Regression Test_Chrome->Home Page" enabled="true">
+    <test name="Regression Test_Chrome1->Home Page" enabled="true">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.qa.opencart.testcases.HomePageTestClass"/>
         </classes>
     </test>
-    <test name="Regression Test_Edge->Home Page" enabled="true">
+    <test name="Regression Test_Edge1->Home Page" enabled="true">
         <parameter name="browser" value="edge"/>
         <classes>
             <class name="com.qa.opencart.testcases.LoginPageTest"/>
+        </classes>
+    </test>
+    <test name="Regression Test_Edge2->Home Page" enabled="true">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.qa.opencart.testcases.OrderPageTest"/>
         </classes>
     </test>
 </suite>

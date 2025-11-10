@@ -1,4 +1,5 @@
+com\qa\opencart\testcases\HomePageTestClass.class
 com\qa\opencart\listeners\ExtentReportListener.class
 com\qa\opencart\testcases\LoginPageTest.class
-com\qa\opencart\testcases\HomePageTestClass.class
 com\qa\opencart\testcases\BaseTest.class
+com\qa\opencart\testcases\OrderPageTest.class
