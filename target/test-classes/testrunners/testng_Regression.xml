@@ -16,7 +16,7 @@
             <class name="com.qa.opencart.testcases.LoginPageTest"/>
         </classes>
     </test>
-    <test name="Regression Test_Edge2->Home Page" enabled="true">
+    <test name="Regression Test_Edge2->Order Page" enabled="true">
         <parameter name="browser" value="edge"/>
         <classes>
             <class name="com.qa.opencart.testcases.OrderPageTest"/>
