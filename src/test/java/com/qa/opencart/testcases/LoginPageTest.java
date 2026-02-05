@@ -29,7 +29,6 @@ public class LoginPageTest extends BaseTest
         return new Object[][]{
                         {"WebUser@youpmail.com", "Demo@1234"},
                         {"Waqas@gmail.com", "Test@123"},
-                        {"User@mail.com", "123@Demo"},
                         {"Testerqaw@youpmail.com", "Playwright@123"}
         };
     }

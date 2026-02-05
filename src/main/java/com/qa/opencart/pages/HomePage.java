@@ -11,6 +11,7 @@ public class HomePage
     private final String search = "//*[@id=\"search\"]/input";
     private final String searchIcon = "//*[@id=\"search\"]/span/button";
     private final String searchPageHeader = "div#content h1";
+
     //Product detail page
     private final String ProdCLick="//img[@title=\"Samsung Galaxy Tab 10.1\"]";
     private final String ProdImgView="//ul[@class='thumbnails']//li[1]//a[1]";
@@ -49,7 +50,8 @@ public class HomePage
 
         String header = page.textContent(searchPageHeader);
         System.out.println("Search product name: " + header);
-      //  page.evaluate("window.scrollBy(0, 600)");
+
+        //  page.evaluate("window.scrollBy(0, 600)");
         page.click(ProdCLick);
         return header;
 
